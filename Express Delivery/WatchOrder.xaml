@@ -43,8 +43,22 @@
             <TextBox x:Name="textBoxID" HorizontalAlignment="Center" Width="227" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="ID замовлення" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}"/>
             <TextBox x:Name="textBoxPlace" Margin="0 15 0 0" HorizontalAlignment="Center" Width="227" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Місцезнаходження" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}"/>
             <Button Margin="0,15,0,0" Content="Знайти" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="Button_Search_Click" Width="227"/>
-            <Button x:Name="buttonEdit" Margin="0,15,0,0" Content="Редагувати" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="Button_Edit_Click" Width="227"/>
-            <Button x:Name="buttonSave" Margin="0,15,0,0" Content="Зберегти" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="Button_Save_Click" Width="227" Visibility="Collapsed"/>
+            <Button x:Name="buttonEdit" Margin="0,15,0,0" Content="Редагувати" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="Button_Edit_Click" Width="227" Visibility="Hidden"/>
         </StackPanel>
+        <Grid x:Name="gridEdit" Background="#66000000" Visibility="Collapsed">
+            <DataGrid x:Name="dataGridEdit" Margin="74,229,0,0" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="139" VerticalAlignment="Top" Width="796" Cursor="Arrow" RenderTransformOrigin="0.5,0.5" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" GridLinesVisibility="Horizontal" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding dateReceiving}" CanUserSort="False" Header="Дата отримання"/>
+                    <DataGridTextColumn Binding="{Binding dateEnd}" CanUserSort="False" Header="Дата зберірання"/>
+                    <DataGridTextColumn Binding="{Binding order_fragility}" CanUserSort="False" Header="Крихкість"/>
+                    <DataGridTextColumn Binding="{Binding order_return}" CanUserSort="False" Header="Зворот документів"/>
+                    <DataGridTextColumn Binding="{Binding order_place}" CanUserSort="False" Header="Місцезнаходження"/>
+                    <DataGridTextColumn Binding="{Binding order_name_recipient}" CanUserSort="False" Header="ПІБ отримувача"/>
+                    <DataGridTextColumn Binding="{Binding order_tel_recipient}" CanUserSort="False" Header="Телефон отримувача"/>
+                    <DataGridTextColumn Binding="{Binding order_department_number}" CanUserSort="False" Header="Номер відділення"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="buttonSave" Margin="643,373,83.6,161.8" Content="Зберегти" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="Button_Save_Click" Width="227"/>
+        </Grid>
     </Grid>
 </Window>

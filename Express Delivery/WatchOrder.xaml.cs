@@ -22,6 +22,7 @@ namespace Express_Delivery
     public partial class WatchOrder : Window
     {
         private static string connectString = "SERVER=localhost;DATABASE=expressdeliverycompany;UID=root;PASSWORD=MeRRFiS2002;";
+        private string index;
         private string[] nameInfo = { "ID Замовлення",
         "ПІБ відправника",
         "Телефон відправника",
@@ -46,10 +47,12 @@ namespace Express_Delivery
 
         private MySqlCommand minOrder;
         private MySqlCommand checkId;
+        private MySqlCommand edit;
         private MySqlCommand[] order = new MySqlCommand[19];
         
 
         private DataTable dt = new DataTable();
+        private DataTable dtEdit = new DataTable();
 
         private MySqlDataAdapter adapterMin;
 
@@ -79,13 +82,14 @@ namespace Express_Delivery
             minOrder = new MySqlCommand("SELECT order_id,order_name_recipient,DATE_FORMAT(order_date, '%d.%m.%Y') as 'dateOrder',order_department_number,order_place FROM order_ ORDER BY 1", connection);
             adapterMin = new MySqlDataAdapter(minOrder);
             adapterMin.Fill(dt);
-            dataGridOrderMin.DataContext = dt;
+            dataGridOrderMin.ItemsSource = dt.DefaultView;
             connection.Close();
         }
 
         private void dataGridOrderMin_MouseUp(object sender, MouseButtonEventArgs e)
         {
             connection.Open();
+            index = dt.DefaultView[dataGridOrderMin.SelectedIndex]["order_id"].ToString();
             order[0] = new MySqlCommand("SELECT order_id FROM order_ WHERE order_id = '" + dt.DefaultView[dataGridOrderMin.SelectedIndex]["order_id"].ToString() + "'", connection);
             checkId = new MySqlCommand("SELECT order_client_id FROM order_ WHERE order_id = '"+ order[0].ExecuteScalar().ToString() + "'", connection);
             if(checkId.ExecuteScalar().ToString() == null)
@@ -125,6 +129,7 @@ namespace Express_Delivery
             for (int i = 0; i < 19; i++)
                 result.Add(new OrderInformation(nameInfo[i], order[i].ExecuteScalar().ToString()));
             dataGridOrder.ItemsSource = result;
+            buttonEdit.Visibility = Visibility.Visible;
             connection.Close();
         }
 
@@ -143,20 +148,28 @@ namespace Express_Delivery
 
         private void Button_Edit_Click(object sender, RoutedEventArgs e)
         {
-            dataGridOrder.IsReadOnly = false;
-            buttonEdit.Visibility = Visibility.Collapsed;
-            buttonSave.Visibility = Visibility.Visible;
+            gridEdit.Visibility = Visibility.Visible;
+            edit = new MySqlCommand(@"SELECT order_id,
+                                    DATE_FORMAT(order_date_end, '%d.%m.%Y') AS 'dateEnd',
+                                    DATE_FORMAT(order_date_receiving, '%d.%m.%Y') AS 'dateReceiving',
+                                    order_fragility,
+                                    order_place,
+                                    order_return,
+                                    order_name_recipient,
+                                    order_tel_recipient,
+                                    order_department_number
+                                    FROM order_ WHERE order_id = '" + index + "'", connection);
+            adapterMin = new MySqlDataAdapter(edit);
+            dtEdit.Clear();
+            adapterMin.Fill(dtEdit);
+            dataGridEdit.DataContext = dtEdit;
         }
 
         private void Button_Save_Click(object sender, RoutedEventArgs e)
         {
-            DataSet ds = new DataSet();
-            adapterMin = new MySqlDataAdapter("SELECT * FROM order_", connection);
             MySqlCommandBuilder cmdb = new MySqlCommandBuilder(adapterMin);
-            adapterMin.Update(ds,);
-            buttonEdit.Visibility = Visibility.Visible;
-            buttonSave.Visibility = Visibility.Collapsed;
-            dataGridOrder.IsReadOnly = true;
+            adapterMin.Update(dtEdit);
+            gridEdit.Visibility = Visibility.Collapsed;
         }
     }
 }
