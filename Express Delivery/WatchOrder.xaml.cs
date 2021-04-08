@@ -71,9 +71,19 @@ namespace Express_Delivery
         private void Button_Return_Click(object sender, RoutedEventArgs e)
         {
             EmployeeMenu employeeMenu = new EmployeeMenu();
-            employeeMenu.Show();
-            employeeMenu.nameEmployee.Text = EmployeeMenu.nameEmloyee;
-            Hide();
+            AdminMenu adminMenu = new AdminMenu();
+            if (MainWindow.namePost.ExecuteScalar().ToString() == "Касир")
+            {
+                employeeMenu.Show();
+                employeeMenu.nameEmployee.Text = EmployeeMenu.nameEmloyee;
+                Hide();
+            }
+            else
+            {
+                adminMenu.Show();
+                adminMenu.nameEmployee.Text = EmployeeMenu.nameEmloyee;
+                Hide();
+            }
         }
 
         private void dataGridOrderMin_Loaded(object sender, RoutedEventArgs e)

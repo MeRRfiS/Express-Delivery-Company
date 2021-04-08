@@ -25,6 +25,7 @@ namespace Express_Delivery
         public static string idEmployee;
         private static string connectString = "SERVER=localhost;DATABASE=expressdeliverycompany;UID=root;PASSWORD=MeRRFiS2002;";
         private MySqlConnection connection = new MySqlConnection(connectString);
+        public static MySqlCommand namePost;
         private EmployeeMenu employeeMenu = new EmployeeMenu();
         private AdminMenu adminMenu = new AdminMenu();
 
@@ -42,7 +43,6 @@ namespace Express_Delivery
         {
             MySqlCommand autorizationCmd = new MySqlCommand("SELECT employee_id FROM employee WHERE employee_login = '" + loginBox.Text + "' and employee_password = '" + passBox.Password + "'", connection);
             MySqlCommand nameEmployeeCmd;
-            MySqlCommand namePost;
             connection.Open();
             if(autorizationCmd.ExecuteScalar() == null)
                 MessageBox.Show("Такого користувача не існує!\nПеревірте логін чи пароль.", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -62,6 +62,7 @@ namespace Express_Delivery
                 {
                     adminMenu.Show();
                     adminMenu.nameEmployee.Text = nameEmployeeCmd.ExecuteScalar().ToString();
+                    AdminMenu.nameEmloyee = nameEmployeeCmd.ExecuteScalar().ToString();
                     Hide();
                 }
             }
