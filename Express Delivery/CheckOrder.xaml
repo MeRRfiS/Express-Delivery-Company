@@ -1,0 +1,80 @@
+﻿<Window x:Class="Express_Delivery.CheckOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Express_Delivery"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Autorization" Height="587" Width="960" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Background="#28527A">
+        <Image Source="Image/Menu.png" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,0.6,0">
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="4" Direction="270" Opacity="0.25"/>
+            </Image.Effect>
+        </Image>
+        <TextBlock Text="Підтвердіть замовлення" FontSize="54" FontFamily="Roboto" FontWeight="DemiBold" Margin="39,12,279.6,498.8"/>
+        <Button Content="←" FontFamily="Global User Interface" Margin="788,10,104.6,510.8" Background="#FF626262" BorderBrush="#FF323232" Foreground="Black" FontSize="44" FontWeight="Normal" Height="Auto" Padding="0" Click="Button_Return_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="9"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="×" FontFamily="Global User Interface" Margin="859,10,34.6,510.8" Background="DarkRed" BorderBrush="#FF850000" Foreground="Black" FontSize="44" FontWeight="Normal" Height="Auto" Padding="0" Click="Button_Close_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="9"/>
+            </Button.Effect>
+        </Button>
+        <StackPanel Margin="39,106,34.6,-0.2" Loaded="StackPanel_Loaded">
+            <Grid>
+                <TextBlock Text="ПІБ Відправника:" FontSize="24.75" Margin="0,0,681,0"/>
+                <TextBlock x:Name="textBlockFullName" Text="" FontSize="24.75" Margin="204,0,10,-0.2"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="31*"/>
+                    <ColumnDefinition Width="189*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="ПІБ Отримувача:" FontSize="24.75" Margin="0,0,681,-0.2" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlockFullNameReceiver" Text="" FontSize="24.75" Margin="80.4,0,10,-0.2" Grid.Column="1"/>
+            </Grid>
+            <Grid>
+                <TextBlock Text="Телефон Отримувача:" FontSize="24.75" Margin="0,0,622,-0.2"/>
+                <TextBlock x:Name="textBlockPhone" Text="" FontSize="24.75" Margin="258,0,10,-0.2"/>
+            </Grid>
+            <Grid>
+                <TextBlock Text="Місто:" FontSize="24.75" Margin="0,0,801,-0.2"/>
+                <TextBlock x:Name="textBlockCity" Text="" FontSize="24.75" Margin="79,0,10,-0.2"/>
+            </Grid>
+            <Grid>
+                <TextBlock Text="Номер відділення:" FontSize="24.75" Margin="0,0,665,-0.2"/>
+                <TextBlock x:Name="textBlockAdress" Text="" FontSize="24.75" Margin="220,0,10,-0.2"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Ціна:" FontSize="24.75" Margin="0,0,815,-0.2"/>
+                <TextBlock x:Name="textBlockPrice" Text="" FontSize="24.75" Margin="65,0,10,-0.2"/>
+            </Grid>
+            <Grid>
+                <TextBlock Text="Інформація про посилку:" FontSize="24.75" Margin="0,0,587,-0.2"/>
+            </Grid>
+            <DataGrid x:Name="dataGridBox" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="98" Margin="0,10,0,0" VerticalAlignment="Top" Width="880" Cursor="Arrow" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" Loaded="dataGridBox_Loaded" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id}" CanUserSort="False" Header="ID Замовлення"/>
+                    <DataGridTextColumn Binding="{Binding Weight}" CanUserSort="False" Header="Вага"/>
+                    <DataGridTextColumn Binding="{Binding Fragality}" CanUserSort="False" Header="Крихкість"/>
+                    <DataGridTextColumn Binding="{Binding ReturnDoc}" CanUserSort="False" Header="Зворот документів"/>
+                    <DataGridTextColumn Binding="{Binding Package}" CanUserSort="False" Header="Вид упакування"/>
+                    <DataGridTextColumn Binding="{Binding Delivery}" CanUserSort="False" Header="Вид доставки"/>
+                    <DataGridTextColumn Binding="{Binding DateReceiving}" CanUserSort="False" Header="Дата отримання"/>
+                    <DataGridTextColumn Binding="{Binding DateStorage}" CanUserSort="False" Header="Дата зберігання"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Margin="530,10,0,0" Height="43" Content="Повернутись до редагування" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="5" Click="Button_Edit_Click"/>
+            <Button Margin="530 10 0 0" Height="43" Content="Підтвердити замовлення" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="5" Click="Button_Accses_Click"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

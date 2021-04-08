@@ -1,0 +1,58 @@
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Express Delivery.exe.config
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Express Delivery.exe
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Express Delivery.pdb
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\MainWindow.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\App.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express Delivery_MarkupCompile.cache
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express Delivery_MarkupCompile.lref
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\MainWindow.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express Delivery.g.resources
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express_Delivery.Properties.Resources.resources
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express Delivery.csproj.GenerateResource.cache
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express Delivery.csproj.CoreCompileInputs.cache
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express Delivery.exe
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express Delivery.pdb
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express Delivery.csprojAssemblyReference.cache
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\MaterialDesignColors.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\MaterialDesignColors.pdb
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\App.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\Express Delivery.csproj.CopyComplete
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\EmployeeMenu.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\EmployeeMenu.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\BouncyCastle.Crypto.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Google.Protobuf.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\K4os.Compression.LZ4.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\K4os.Hash.xxHash.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\MySql.Data.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Renci.SshNet.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\System.Buffers.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\System.Memory.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\System.Numerics.Vectors.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Ubiety.Dns.Core.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Zstandard.Net.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Google.Protobuf.pdb
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Google.Protobuf.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\K4os.Compression.LZ4.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\K4os.Hash.xxHash.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\MySql.Data.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\Renci.SshNet.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\System.Buffers.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\System.Memory.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\System.Numerics.Vectors.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\AdminMenu.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\AdminMenu.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\AddOrder.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\AddOrder.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\CheckOrder.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\CheckOrder.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\NewClient.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\NewClient.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\WatchOrder.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\WatchOrder.baml

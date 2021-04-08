@@ -1,0 +1,36 @@
+﻿<Window x:Class="Express_Delivery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Express_Delivery"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Autorization" Height="587" Width="960" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Background="#28527A">
+        <Image HorizontalAlignment="Left" Height="384" Margin="22.8,129,0,0" VerticalAlignment="Top" Width="384" Source="Image/E.png" Grid.Column="1">
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="51" Opacity="0.25"/>
+            </Image.Effect>
+
+        </Image>
+        <Image Source="Image/Menu.png" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,0.6,0">
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="4" Direction="270" Opacity="0.25"/>
+            </Image.Effect>
+        </Image>
+        <TextBlock Text="Авторизація" FontSize="54" FontFamily="Roboto" FontWeight="DemiBold" Margin="39,12,567.6,476.4"/>
+        <Button Content="×" FontFamily="Global User Interface" Margin="859,10,34.6,510.8" Background="DarkRed" BorderBrush="#FF850000" Foreground="Black" FontSize="44" FontWeight="Normal" Height="Auto" Padding="0" Click="Button_Close_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="9"/>
+            </Button.Effect>
+        </Button>
+        <Border Margin="456.8,166,34.6,103.8" Grid.Column="1">
+            <StackPanel>
+                <TextBox x:Name="loginBox" Height="75" Background="#7F6F5D25" BorderBrush="#FBEEAC" Margin="0 40 0 0" materialDesign:HintAssist.Hint="Логін" FontSize="36" FontFamily="Roboto" Style="{StaticResource MaterialDesignOutlinedTextBox}" Foreground="Black" CaretBrush="#FFFFE500" UseLayoutRounding="False" Padding="8,15,8,0" SelectionTextBrush="#FFF4C30A"/>
+                <PasswordBox x:Name="passBox" Height="75" Background="#7F6F5D25" BorderBrush="#FBEEAC" Margin="0 10 0 0" materialDesign:HintAssist.Hint="Пароль" FontSize="36" FontFamily="Roboto" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Foreground="Black" CaretBrush="#FFFFE500" UseLayoutRounding="False" Padding="8,15,8,0" SelectionTextBrush="#FFF4C30A"/>
+                <Button Click="Button_Enter_Click" Margin="0 15 0 0" Height="75" Content="Війти" FontFamily="Global User Interface" Background="#F4D160" FontSize="36" Foreground="Black" BorderThickness="5" BorderBrush="#FFFBEEAC" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
