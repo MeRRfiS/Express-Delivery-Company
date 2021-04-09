@@ -38,5 +38,19 @@ namespace Express_Delivery
             addOrder.Show();
             Hide();
         }
+
+        private void Button_Watch_Order_Click(object sender, RoutedEventArgs e)
+        {
+            WatchOrder watchOrder = new WatchOrder();
+            watchOrder.Show();
+            Hide();
+        }
+
+        private void Button_Watch_Client_Click(object sender, RoutedEventArgs e)
+        {
+            WatchClient watchClient = new WatchClient();
+            watchClient.Show();
+            Hide();
+        }
     }
 }

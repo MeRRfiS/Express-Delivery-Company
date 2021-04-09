@@ -46,9 +46,19 @@ namespace Express_Delivery
         private void Button_Return_Click(object sender, RoutedEventArgs e)
         {
             EmployeeMenu employeeMenu = new EmployeeMenu();
-            employeeMenu.Show();
-            employeeMenu.nameEmployee.Text = EmployeeMenu.nameEmloyee;
-            Hide();
+            AdminMenu adminMenu = new AdminMenu();
+            if (MainWindow.namePost.ExecuteScalar().ToString() == "Касир")
+            {
+                employeeMenu.Show();
+                employeeMenu.nameEmployee.Text = EmployeeMenu.nameEmloyee;
+                Hide();
+            }
+            else
+            {
+                adminMenu.Show();
+                adminMenu.nameEmployee.Text = EmployeeMenu.nameEmloyee;
+                Hide();
+            }
         }
 
         private void dataGridClient_Loaded(object sender, RoutedEventArgs e)
@@ -70,17 +80,17 @@ namespace Express_Delivery
 
         private void Button_Search_Click(object sender, RoutedEventArgs e)
         {
-            clientSearch = new MySqlCommand(@"SELECT client_id, client_first_name,
+            clientSearch = new MySqlCommand($@"SELECT client_id, client_first_name,
                                             client_last_name,
                                             client_pasport,
                                             client_adress,
                                             client_tel
                                             FROM client_
-                                            WHERE client_first_name LIKE('"+ textBoxName.Text + @"%') and
-                                            client_last_name LIKE('" + textBoxSurname.Text + @"%') and
-                                            client_pasport LIKE('" + textBoxPasport.Text + @"%') and
-                                            client_adress LIKE('" + textBoxAdress.Text + @"%') and
-                                            client_tel LIKE('" + textBoxPhone.Text + @"%')
+                                            WHERE client_first_name LIKE('{textBoxName.Text}%') and
+                                            client_last_name LIKE('{textBoxSurname.Text}%') and
+                                            client_pasport LIKE('{textBoxPasport.Text}%') and
+                                            client_adress LIKE('{textBoxAdress.Text}%') and
+                                            client_tel LIKE('{textBoxPhone.Text}%')
                                             Order by 1; ", connection);
             adapterClient = new MySqlDataAdapter(clientSearch);
             dt.Clear();

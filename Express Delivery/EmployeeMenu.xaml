@@ -30,8 +30,8 @@
         <Border Margin="456.8,166,34.6,103.8" Grid.Column="1">
             <StackPanel>
                 <Button Height="93" Content="Дотати замовлення" FontFamily="Global User Interface" Background="#F4D160" FontSize="27" Foreground="Black" BorderThickness="5" BorderBrush="#FFFBEEAC" Click="Button_Add_Order_Click"/>
-                <Button Margin="0 15 0 0" Height="52.5" Content="Переглянути 'Замовлення'" FontFamily="Global User Interface" Background="#F4D160" FontSize="22.5" Foreground="Black" BorderThickness="5" BorderBrush="#FFFBEEAC" />
-                <Button Margin="0 15 0 0" Height="52.5" Content="Переглянути 'Клієнтів'" FontFamily="Global User Interface" Background="#F4D160" FontSize="22.5" Foreground="Black" BorderThickness="5" BorderBrush="#FFFBEEAC" />
+                <Button Margin="0 15 0 0" Height="52.5" Content="Переглянути 'Замовлення'" FontFamily="Global User Interface" Background="#F4D160" FontSize="22.5" Foreground="Black" BorderThickness="5" BorderBrush="#FFFBEEAC" Click="Button_Watch_Order_Click"/>
+                <Button Margin="0 15 0 0" Height="52.5" Content="Переглянути 'Клієнтів'" FontFamily="Global User Interface" Background="#F4D160" FontSize="22.5" Foreground="Black" BorderThickness="5" BorderBrush="#FFFBEEAC" Click="Button_Watch_Client_Click"/>
                 <Button Margin="0 15 0 0" Height="52.5" Content="Оформити звіт" FontFamily="Global User Interface" Background="#F4D160" FontSize="22.5" Foreground="Black" BorderThickness="5" BorderBrush="#FFFBEEAC" />
             </StackPanel>
         </Border>

@@ -19,6 +19,7 @@ namespace Express_Delivery
     /// </summary>
     public partial class AdminMenu : Window
     {
+        public static string nameEmloyee;
         public AdminMenu()
         {
             InitializeComponent();
@@ -27,6 +28,20 @@ namespace Express_Delivery
         private void Button_Close_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void Button_Watch_Order_Click(object sender, RoutedEventArgs e)
+        {
+            WatchOrder watchOrder = new WatchOrder();
+            watchOrder.Show();
+            Hide();
+        }
+
+        private void Button_Watch_Client_Click(object sender, RoutedEventArgs e)
+        {
+            WatchClient watchClient = new WatchClient();
+            watchClient.Show();
+            Hide();
         }
     }
 }
