@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Express_Delivery"
         mc:Ignorable="d"
-        Title="NewEmployee" Height="450" Width="800">
-    <Grid>
-        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Autorization" Height="587" Width="960" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid Background="#28527A">
+        <Image Source="Image/Menu.png" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="0,0,0.6,0">
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="4" Direction="270" Opacity="0.25"/>
+            </Image.Effect>
+        </Image>
+        <TextBlock Text="Зареєструвати робітника" FontSize="46" FontFamily="Roboto" FontWeight="DemiBold" Margin="39,14,339.6,508.8" RenderTransformOrigin="0.496,0.793"/>
+        <Button Content="←" FontFamily="Global User Interface" Margin="788,10,104.6,510.8" Background="#FF626262" BorderBrush="#FF323232" Foreground="Black" FontSize="44" FontWeight="Normal" Height="Auto" Padding="0" Click="Button_Return_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="9"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="×" FontFamily="Global User Interface" Margin="859,10,34.6,510.8" Background="DarkRed" BorderBrush="#FF850000" Foreground="Black" FontSize="44" FontWeight="Normal" Height="Auto" Padding="0" Click="Button_Close_Click">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="9"/>
+            </Button.Effect>
+        </Button>
+        <StackPanel Margin="39,162,34.6,-0.2">
+            <TextBox x:Name="textBoxName" HorizontalAlignment="Center" Width="335" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Ім'я" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}" Margin="255,0,255,0"/>
+            <TextBox x:Name="textBoxSurname" Margin="255,15,255,0" HorizontalAlignment="Center" Width="335" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Прізвище" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}"/>
+            <TextBox x:Name="textBoxLastname" Margin="255,15,255,0" HorizontalAlignment="Center" Width="335" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Побатькові" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}"/>
+            <TextBox x:Name="textBoxPhone" Margin="255,15,255,0" HorizontalAlignment="Center" Width="335" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Телефон" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}"/>
+            <ComboBox x:Name="comboBoxPost" Margin="255,15,255,0" HorizontalAlignment="Center" Width="335" Height="27" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Посада" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignComboBox}"/>
+            <ComboBox x:Name="comboBoxDepartment" Margin="255,15,255,0" HorizontalAlignment="Center" Width="335" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Номер відділення" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignComboBox}"/>
+            <Button Margin="272,15,272,0" Content="Зареєструвати" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="5" Height="Auto" Click="Button_Registered_Click" Width="336"/>
+        </StackPanel>
     </Grid>
 </Window>

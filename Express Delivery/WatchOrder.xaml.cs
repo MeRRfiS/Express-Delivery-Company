@@ -48,6 +48,7 @@ namespace Express_Delivery
         private MySqlCommand minOrder;
         private MySqlCommand checkId;
         private MySqlCommand edit;
+        private MySqlCommand orderDelete;
         private MySqlCommand[] order = new MySqlCommand[19];
         
 
@@ -98,6 +99,7 @@ namespace Express_Delivery
 
         private void dataGridOrderMin_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            buttonDelete.Visibility = Visibility.Visible;
             connection.Open();
             index = dt.DefaultView[dataGridOrderMin.SelectedIndex]["order_id"].ToString();
             order[0] = new MySqlCommand("SELECT order_id FROM order_ WHERE order_id = '" + dt.DefaultView[dataGridOrderMin.SelectedIndex]["order_id"].ToString() + "'", connection);
@@ -180,6 +182,18 @@ namespace Express_Delivery
             MySqlCommandBuilder cmdb = new MySqlCommandBuilder(adapterMin);
             adapterMin.Update(dtEdit);
             gridEdit.Visibility = Visibility.Collapsed;
+        }
+
+        private void Button_Delete_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult dialogResult = MessageBox.Show($"Ви впевнені що хочете видалити замовлення?", "Повідомлення", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (dialogResult == MessageBoxResult.No) return;
+            orderDelete = new MySqlCommand($"DELETE FROM order_ WHERE order_id = {index};", connection);
+            orderDelete.ExecuteReader();
+            dt.Clear();
+            adapterMin.Fill(dt);
+            dataGridOrderMin.ItemsSource = dt.DefaultView;
+            connection.Close();
         }
     }
 }

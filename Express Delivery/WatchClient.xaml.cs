@@ -22,11 +22,14 @@ namespace Express_Delivery
     public partial class WatchClient : Window
     {
         private static string connectString = "SERVER=localhost;DATABASE=expressdeliverycompany;UID=root;PASSWORD=MeRRFiS2002;";
+        private string index;
 
         private MySqlConnection connection;
 
         private MySqlCommand client;
         private MySqlCommand clientSearch;
+        private MySqlCommand clientName;
+        private MySqlCommand clientDelete;
 
         private MySqlDataAdapter adapterClient;
 
@@ -105,6 +108,25 @@ namespace Express_Delivery
             dataGridClient.IsReadOnly = true;
             buttonEdit.Visibility = Visibility.Visible;
             buttonSave.Visibility = Visibility.Collapsed;
+        }
+
+        private void Button_Delete_Click(object sender, RoutedEventArgs e)
+        {
+            clientName = new MySqlCommand($"SELECT client_first_name FROM client WHERE client_id = '{index}'", connection);
+            MessageBoxResult dialogResult = MessageBox.Show($"Ви впевнені що хочете видалити {clientName.ExecuteScalar().ToString()}?", "Повідомлення", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (dialogResult == MessageBoxResult.No) return;
+            clientDelete = new MySqlCommand($"DELETE FROM client_ WHERE client_id = {index};", connection);
+            clientDelete.ExecuteReader();
+            dt.Clear();
+            adapterClient.Fill(dt);
+            dataGridClient.ItemsSource = dt.DefaultView;
+            connection.Close();
+        }
+
+        private void dataGridClient_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            buttonDelete.Visibility = Visibility.Visible;
+            index = dt.DefaultView[dataGridClient.SelectedIndex]["client_id"].ToString();
         }
     }
 }

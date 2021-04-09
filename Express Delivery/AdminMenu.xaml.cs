@@ -43,5 +43,12 @@ namespace Express_Delivery
             watchClient.Show();
             Hide();
         }
+
+        private void Button_Watch_Employee_Click(object sender, RoutedEventArgs e)
+        {
+            WatchEmployee watchEmployee = new WatchEmployee();
+            watchEmployee.Show();
+            Hide();
+        }
     }
 }

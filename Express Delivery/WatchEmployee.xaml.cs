@@ -31,6 +31,7 @@ namespace Express_Delivery
         private DataTable dt = new DataTable();
 
         private MySqlCommand employee;
+        private MySqlCommand employeePost;
         private MySqlCommand employeeName;
         private MySqlCommand employeeSearch;
         private MySqlCommand employeeDelete;
@@ -44,13 +45,28 @@ namespace Express_Delivery
         private void Button_Dismiss_Click(object sender, RoutedEventArgs e)
         {
             connection.Open();
+            employeePost = new MySqlCommand($"SELECT p.post_name FROM post p JOIN employee e ON p.post_id = e.employee_post_id WHERE employee_id = '{index}' ORDER BY 1", connection);
             employeeName = new MySqlCommand($"SELECT employee_first_name FROM employee WHERE employee_id = '{index}'", connection);
             MessageBoxResult dialogResult = MessageBox.Show($"Ви впевнені що хочете звільнити {employeeName.ExecuteScalar().ToString()}?", "Повідомлення", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if(dialogResult == MessageBoxResult.Yes)
-            {
-                employeeDelete = new MySqlCommand($"DELETE FROM employee WHERE employee_id = {index};", connection);
-                employeeDelete.ExecuteReader();
-            }
+            if (dialogResult == MessageBoxResult.No)
+                return;
+            if (MainWindow.namePost.ExecuteScalar().ToString() == "Адміністратор відділення")
+                if (employeePost.ExecuteScalar().ToString() != "Касир")
+                {
+                    MessageBox.Show("Неможливо виконати дію!\nВи не можете звільнити людину, яка має вищу посаду", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            if (MainWindow.namePost.ExecuteScalar().ToString() == "Директор областної філії")
+                if (employeePost.ExecuteScalar().ToString() == "Директор компанії")
+                {
+                    MessageBox.Show("Неможливо виконати дію!\nВи не можете звільнити людину, яка має вищу посаду", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            employeeDelete = new MySqlCommand($"DELETE FROM employee WHERE employee_id = {index};", connection);
+            employeeDelete.ExecuteReader();
+            dt.Clear();
+            adapterEmployee.Fill(dt);
+            dataGridEmployee.ItemsSource = dt.DefaultView;
             connection.Close();
         }
 
