@@ -48,9 +48,10 @@ namespace Express_Delivery
 
         private void Button_Return_Click(object sender, RoutedEventArgs e)
         {
+            connection.Open();
             EmployeeMenu employeeMenu = new EmployeeMenu();
             AdminMenu adminMenu = new AdminMenu();
-            if (MainWindow.namePost.ExecuteScalar().ToString() == "Касир")
+            if (MainWindow.namePostEmployee == "Касир")
             {
                 employeeMenu.Show();
                 employeeMenu.nameEmployee.Text = EmployeeMenu.nameEmloyee;
@@ -59,9 +60,10 @@ namespace Express_Delivery
             else
             {
                 adminMenu.Show();
-                adminMenu.nameEmployee.Text = EmployeeMenu.nameEmloyee;
+                adminMenu.nameEmployee.Text = AdminMenu.nameEmloyee;
                 Hide();
             }
+            connection.Close();
         }
 
         private void dataGridClient_Loaded(object sender, RoutedEventArgs e)

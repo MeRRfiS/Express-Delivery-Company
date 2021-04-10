@@ -23,6 +23,7 @@ namespace Express_Delivery
     public partial class MainWindow : Window
     {
         public static string idEmployee;
+        public static string namePostEmployee;
         private static string connectString = "SERVER=localhost;DATABASE=expressdeliverycompany;UID=root;PASSWORD=MeRRFiS2002;";
         private MySqlConnection connection = new MySqlConnection(connectString);
         public static MySqlCommand namePost;
@@ -51,7 +52,8 @@ namespace Express_Delivery
                 idEmployee = autorizationCmd.ExecuteScalar().ToString();
                 nameEmployeeCmd = new MySqlCommand("SELECT employee_first_name FROM employee WHERE employee_id = '" + idEmployee + "'", connection);
                 namePost = new MySqlCommand("SELECT p.post_name FROM post p JOIN employee e ON p.post_id = e.employee_post_id WHERE employee_id = '" + idEmployee + "' ORDER BY 1", connection);
-                if(namePost.ExecuteScalar().ToString() == "Касир")
+                namePostEmployee = namePost.ExecuteScalar().ToString();
+                if (namePostEmployee == "Касир")
                 {
                     employeeMenu.Show();
                     employeeMenu.nameEmployee.Text = nameEmployeeCmd.ExecuteScalar().ToString();

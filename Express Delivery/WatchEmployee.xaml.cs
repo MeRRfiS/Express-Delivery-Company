@@ -50,13 +50,13 @@ namespace Express_Delivery
             MessageBoxResult dialogResult = MessageBox.Show($"Ви впевнені що хочете звільнити {employeeName.ExecuteScalar().ToString()}?", "Повідомлення", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (dialogResult == MessageBoxResult.No)
                 return;
-            if (MainWindow.namePost.ExecuteScalar().ToString() == "Адміністратор відділення")
+            if (MainWindow.namePostEmployee == "Адміністратор відділення")
                 if (employeePost.ExecuteScalar().ToString() != "Касир")
                 {
                     MessageBox.Show("Неможливо виконати дію!\nВи не можете звільнити людину, яка має вищу посаду", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
-            if (MainWindow.namePost.ExecuteScalar().ToString() == "Директор областної філії")
+            if (MainWindow.namePostEmployee == "Директор областної філії")
                 if (employeePost.ExecuteScalar().ToString() == "Директор компанії")
                 {
                     MessageBox.Show("Неможливо виконати дію!\nВи не можете звільнити людину, яка має вищу посаду", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);

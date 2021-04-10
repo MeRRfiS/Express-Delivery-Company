@@ -60,3 +60,5 @@ D:\My Laboratory Work\Курсова робота\Express Delivery\Express Deliv
 D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\WatchClient.baml
 D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\WatchEmployee.g.cs
 D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\WatchEmployee.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\NewEmployee.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Debug\NewEmployee.baml
