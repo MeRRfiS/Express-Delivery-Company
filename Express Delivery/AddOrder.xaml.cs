@@ -38,6 +38,7 @@ namespace Express_Delivery
         public static string returnDoc;
         public static string pasport;
         public static string price;
+        public static string priceNumber;
         public static int packageNumber;
         public static int deliveryNumber;
         public static int cityNameNumber;
@@ -433,6 +434,11 @@ namespace Express_Delivery
                 else
                     returnDoc = "Ні";
                 price = textBlockPrice.Text;
+                for (int i = 0; i < price.Length; i++)
+                {
+                    if (price[i] == ' ') break;
+                    priceNumber += price[i];
+                }
                 checkOrder.Show();
                 Hide();
             }

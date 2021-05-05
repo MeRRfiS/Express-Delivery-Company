@@ -13,11 +13,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using FastReport;
 
 namespace Express_Delivery
 {
-    
-
     public partial class CheckOrder : Window
     {
 
@@ -28,6 +27,25 @@ namespace Express_Delivery
         private MySqlCommand lastIndex;
         private MySqlCommand newOrder;
         private MySqlCommand idClient;
+        private MySqlCommand receipt;
+
+        private Report report = new Report();
+
+        private DataSet ds = new DataSet();
+
+        private MySqlDataAdapter adapterReceipt;
+
+        private void ShowReceipt()
+        {
+            connection.Open();
+            receipt = new MySqlCommand("SELECT * FROM receipt ORDER BY 1 DESC LIMIT 1", connection);
+            adapterReceipt = new MySqlDataAdapter(receipt);
+            adapterReceipt.Fill(ds, "receipt");
+            report.RegisterData(ds);
+            report.Load("Receipt.frx");
+            report.Show();
+            connection.Close();
+        }
 
         public CheckOrder()
         {
@@ -87,10 +105,10 @@ namespace Express_Delivery
                 addOrder.textBoxTelephone.Text = AddOrder.phone;
             }
             addOrder.textBoxWeight.Text = AddOrder.weight;
-            addOrder.comboBoxPackage.SelectedItem = AddOrder.packageNumber;
-            addOrder.comboBoxDelivery.SelectedItem = AddOrder.deliveryNumber;
-            addOrder.comboBoxCity.SelectedItem = AddOrder.cityNameNumber;
-            addOrder.comboBoxDepartment.SelectedItem = AddOrder.departmentNumber;
+            addOrder.comboBoxPackage.SelectedIndex = AddOrder.packageNumber;
+            addOrder.comboBoxDelivery.SelectedIndex = AddOrder.deliveryNumber;
+            addOrder.comboBoxCity.SelectedIndex = AddOrder.cityNameNumber;
+            addOrder.comboBoxDepartment.SelectedIndex = AddOrder.departmentNumber;
             if (AddOrder.fragality == "Так")
                 addOrder.radioButtonYes.IsChecked = true;
             else
@@ -102,9 +120,11 @@ namespace Express_Delivery
             {
                 addOrder.checkBoxEnd.IsChecked = true;
                 addOrder.textBoxEnd.Text = int.Parse((DateTime.Parse(AddOrder.dateStorage) - DateTime.Parse(AddOrder.dateReceiving)).ToString("dd")).ToString();
+                addOrder.textBoxEnd.IsEnabled = true;
             }
             if (AddOrder.returnDoc == "Так")
                 addOrder.checkBoxReturn.IsChecked = true;
+            addOrder.textBlockPrice.Text = AddOrder.price;
             addOrder.Show();
             Hide();
         }
@@ -116,7 +136,7 @@ namespace Express_Delivery
             {
                 newOrder = new MySqlCommand("INSERT INTO order_ VALUES(NULL, " + float.Parse(AddOrder.weight) + ", '" +
                AddOrder.fragality + "', " + (AddOrder.packageNumber + 1) + ", '" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "', '" + DateTime.Parse(AddOrder.dateStorage).ToString("yyyy-MM-dd") + "', NULL, '" +
-               DateTime.Parse(AddOrder.dateReceiving).ToString("yyyy-MM-dd") + "', NULL, " + MainWindow.idEmployee + ", " + (AddOrder.deliveryNumber + 1) + ", " + (AddOrder.departmentNumber + 1) + ", '" +
+               DateTime.Parse(AddOrder.dateReceiving).ToString("yyyy-MM-dd") + "', NULL, " + MainWindow.idEmployee + ", " + (AddOrder.deliveryNumber + 1) + ", " + (AddOrder.department) + ", '" +
                AddOrder.nameReceiver + " " + AddOrder.surnameReceiver + "', " + (AddOrder.cityNameNumber + 1) + ", 'У місті відправника', '" +
                AddOrder.price + "', '" + AddOrder.returnDoc + "', '" + AddOrder.phoneReceiver + "', '" + AddOrder.name + " " + AddOrder.surname + "', '" +
                AddOrder.phone + "')", connection);
@@ -125,14 +145,20 @@ namespace Express_Delivery
                 idClient = new MySqlCommand("SELECT client_id FROM client_ WHERE client_pasport = '" + AddOrder.pasport + "';", connection);
                 newOrder = new MySqlCommand("INSERT INTO order_ VALUES(NULL, " + float.Parse(AddOrder.weight) + ", '" +
                AddOrder.fragality + "', " + (AddOrder.packageNumber + 1) + ", '" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "', '" + DateTime.Parse(AddOrder.dateStorage).ToString("yyyy-MM-dd") + "', NULL, '" +
-               DateTime.Parse(AddOrder.dateReceiving).ToString("yyyy-MM-dd") + "', "+ int.Parse(idClient.ExecuteScalar().ToString()) +", " + MainWindow.idEmployee + ", " + (AddOrder.deliveryNumber + 1) + ", " + (AddOrder.departmentNumber + 1) + ", '" +
+               DateTime.Parse(AddOrder.dateReceiving).ToString("yyyy-MM-dd") + "', "+ int.Parse(idClient.ExecuteScalar().ToString()) +", " + MainWindow.idEmployee + ", " + (AddOrder.delivery) + ", " + (AddOrder.departmentNumber + 1) + ", '" +
                AddOrder.nameReceiver + " " + AddOrder.surnameReceiver + "', " + (AddOrder.cityNameNumber + 1) + ", 'У місті відправника', '" +
                AddOrder.price + "', '" + AddOrder.returnDoc + "', '" + AddOrder.phoneReceiver + "', NULL, NULL)", connection);
             }
             newOrder.ExecuteReader();
             connection.Close();
             MessageBox.Show("Замовлення оформленно!", "Повідомлення", MessageBoxButton.OK, MessageBoxImage.Information);
+            Surrender surrender = new Surrender();
+            if(surrender.ShowDialog() == true)
+                MessageBox.Show($"Решта: {int.Parse(surrender.textBoxMoney.Text) - int.Parse(AddOrder.priceNumber)}", "Решта", MessageBoxButton.OK, MessageBoxImage.Information);
+                
+            ShowReceipt();
             EmployeeMenu employeeMenu = new EmployeeMenu();
+            employeeMenu.nameEmployee.Text = EmployeeMenu.nameEmloyee;
             employeeMenu.Show();
             Hide();
         }

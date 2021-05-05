@@ -101,12 +101,11 @@ namespace Express_Delivery
 
         private void dataGridOrderMin_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            buttonDelete.Visibility = Visibility.Visible;
             connection.Open();
             index = dt.DefaultView[dataGridOrderMin.SelectedIndex]["order_id"].ToString();
             order[0] = new MySqlCommand("SELECT order_id FROM order_ WHERE order_id = '" + dt.DefaultView[dataGridOrderMin.SelectedIndex]["order_id"].ToString() + "'", connection);
             checkId = new MySqlCommand("SELECT order_client_id FROM order_ WHERE order_id = '"+ order[0].ExecuteScalar().ToString() + "'", connection);
-            if(checkId.ExecuteScalar().ToString() == null)
+            if(checkId.ExecuteScalar().ToString() == "")
             {
                 order[1] = new MySqlCommand("SELECT order_name_client FROM order_ WHERE order_id = '" + order[0].ExecuteScalar().ToString() + "'", connection);
                 order[2] = new MySqlCommand("SELECT order_tel_client FROM order_ WHERE order_id = '" + order[0].ExecuteScalar().ToString() + "'", connection);
@@ -151,7 +150,7 @@ namespace Express_Delivery
         {
             connection.Open();
             minOrder = new MySqlCommand("SELECT order_id,order_name_recipient,DATE_FORMAT(order_date, '%d.%m.%Y') as 'dateOrder',order_department_number,order_place FROM order_ " + 
-                "WHERE order_id LIKE ('"+ textBoxID.Text + "%') and order_place LIKE ('" + textBoxPlace.Text + "%') ORDER BY 1", connection);
+                "WHERE order_id LIKE ('"+ textBoxID.Text + "%') ORDER BY 1", connection);
             adapterMin = new MySqlDataAdapter(minOrder);
             dt.Clear();
             adapterMin.Fill(dt);
@@ -184,18 +183,6 @@ namespace Express_Delivery
             MySqlCommandBuilder cmdb = new MySqlCommandBuilder(adapterMin);
             adapterMin.Update(dtEdit);
             gridEdit.Visibility = Visibility.Collapsed;
-        }
-
-        private void Button_Delete_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBoxResult dialogResult = MessageBox.Show($"Ви впевнені що хочете видалити замовлення?", "Повідомлення", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (dialogResult == MessageBoxResult.No) return;
-            orderDelete = new MySqlCommand($"DELETE FROM order_ WHERE order_id = {index};", connection);
-            orderDelete.ExecuteReader();
-            dt.Clear();
-            adapterMin.Fill(dt);
-            dataGridOrderMin.ItemsSource = dt.DefaultView;
-            connection.Close();
         }
     }
 }

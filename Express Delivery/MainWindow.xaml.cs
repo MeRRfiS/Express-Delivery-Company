@@ -24,10 +24,18 @@ namespace Express_Delivery
     {
         public static string idEmployee;
         public static string namePostEmployee;
+        public static string departmentCity;
+        
         private static string connectString = "SERVER=localhost;DATABASE=expressdeliverycompany;UID=root;PASSWORD=MeRRFiS2002;";
+        
         private MySqlConnection connection = new MySqlConnection(connectString);
+        
         public static MySqlCommand namePost;
+        public static MySqlCommand departmentNumber;
+        private MySqlCommand depCityCmd;
+
         private EmployeeMenu employeeMenu = new EmployeeMenu();
+        
         private AdminMenu adminMenu = new AdminMenu();
 
         public MainWindow()
@@ -44,6 +52,7 @@ namespace Express_Delivery
         {
             MySqlCommand autorizationCmd = new MySqlCommand("SELECT employee_id FROM employee WHERE employee_login = '" + loginBox.Text + "' and employee_password = '" + passBox.Password + "'", connection);
             MySqlCommand nameEmployeeCmd;
+            
             connection.Open();
             if(autorizationCmd.ExecuteScalar() == null)
                 MessageBox.Show("Такого користувача не існує!\nПеревірте логін чи пароль.", "Помилка", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -53,6 +62,17 @@ namespace Express_Delivery
                 nameEmployeeCmd = new MySqlCommand("SELECT employee_first_name FROM employee WHERE employee_id = '" + idEmployee + "'", connection);
                 namePost = new MySqlCommand("SELECT p.post_name FROM post p JOIN employee e ON p.post_id = e.employee_post_id WHERE employee_id = '" + idEmployee + "' ORDER BY 1", connection);
                 namePostEmployee = namePost.ExecuteScalar().ToString();
+                depCityCmd = new MySqlCommand($@"SELECT d.department_city_id as 'departmentCity'
+                                            FROM department d
+                                            JOIN employee e ON(employee_department_id = department_id)
+                                            WHERE e.employee_id = {idEmployee}
+                                            ORDER BY e.employee_id", connection);
+                departmentNumber = new MySqlCommand($@"SELECT d.department_id,d.department_number
+                                                        FROM department d
+                                                        JOIN employee e ON(employee_department_id = department_id)
+                                                        WHERE e.employee_id = {idEmployee}
+                                                        ORDER BY e.employee_id", connection);
+                departmentCity = depCityCmd.ExecuteScalar().ToString();
                 if (namePostEmployee == "Касир")
                 {
                     employeeMenu.Show();
@@ -62,6 +82,7 @@ namespace Express_Delivery
                 }
                 else
                 {
+                    
                     adminMenu.Show();
                     adminMenu.nameEmployee.Text = nameEmployeeCmd.ExecuteScalar().ToString();
                     AdminMenu.nameEmloyee = nameEmployeeCmd.ExecuteScalar().ToString();

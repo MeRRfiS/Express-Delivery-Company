@@ -24,7 +24,7 @@
                 <DropShadowEffect BlurRadius="9"/>
             </Button.Effect>
         </Button>
-        <DataGrid x:Name="dataGridClient" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="468" Margin="39,103,0,0" VerticalAlignment="Top" Width="648" Cursor="Arrow" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Loaded="dataGridClient_Loaded" MouseUp="dataGridClient_MouseUp" AutoGenerateColumns="False">
+        <DataGrid x:Name="dataGridClient" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="468" Margin="39,103,0,0" VerticalAlignment="Top" Width="648" Cursor="Arrow" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Loaded="dataGridClient_Loaded" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding client_first_name}" CanUserSort="False" Header="Ім'я"/>
                 <DataGridTextColumn Binding="{Binding client_last_name}" CanUserSort="False" Header="Прізвище"/>
@@ -38,9 +38,7 @@
             <TextBox x:Name="textBoxSurname" Margin="0 15 0 0" HorizontalAlignment="Center" Width="227" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Прізвище клієнта" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}"/>
             <TextBox x:Name="textBoxPasport" Margin="0 15 0 0" HorizontalAlignment="Center" Width="227" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Серія паспорту" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}"/>
             <TextBox x:Name="textBoxAdress" Margin="0 15 0 0" HorizontalAlignment="Center" Width="227" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Адреса" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}"/>
-            <TextBox x:Name="textBoxPhone" Margin="0 15 0 0" HorizontalAlignment="Center" Width="227" Height="26" Background="White" BorderBrush="#FF8AC4D0" materialDesign:HintAssist.Hint="Телефон" FontSize="22.5" Padding="8,0,0,0" FontFamily="Roboto" Style="{StaticResource MaterialDesignTextBox}"/>
-            <Button Margin="0,15,0,0" Content="Видалити" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="Button_Search_Click" Width="227"/>
-            <Button x:Name="buttonDelete" Margin="0,15,0,0" Content="Знайти" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="Button_Delete_Click" Width="227" Visibility="Collapsed"/>
+            <Button Margin="0,15,0,0" Content="Знайти" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="Button_Search_Click" Width="227"/>
             <Button x:Name="buttonSave" Margin="0,15,0,0" Content="Зберегти" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="button_Save_Click" Width="227" Visibility="Collapsed"/>
             <Button x:Name="buttonEdit" Margin="0,15,0,0" Content="Редагувати" HorizontalAlignment="Center" Background="#FFF4D160" Foreground="Black" BorderBrush="#FFFBEEAC" FontSize="21" FontFamily="Roboto" BorderThickness="3" Height="Auto" Click="Button_Edit_Click" Width="227"/>
         </StackPanel>

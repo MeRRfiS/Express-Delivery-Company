@@ -94,8 +94,7 @@ namespace Express_Delivery
                                             WHERE client_first_name LIKE('{textBoxName.Text}%') and
                                             client_last_name LIKE('{textBoxSurname.Text}%') and
                                             client_pasport LIKE('{textBoxPasport.Text}%') and
-                                            client_adress LIKE('{textBoxAdress.Text}%') and
-                                            client_tel LIKE('{textBoxPhone.Text}%')
+                                            client_adress LIKE('{textBoxAdress.Text}%')
                                             Order by 1; ", connection);
             adapterClient = new MySqlDataAdapter(clientSearch);
             dt.Clear();
@@ -110,25 +109,6 @@ namespace Express_Delivery
             dataGridClient.IsReadOnly = true;
             buttonEdit.Visibility = Visibility.Visible;
             buttonSave.Visibility = Visibility.Collapsed;
-        }
-
-        private void Button_Delete_Click(object sender, RoutedEventArgs e)
-        {
-            clientName = new MySqlCommand($"SELECT client_first_name FROM client WHERE client_id = '{index}'", connection);
-            MessageBoxResult dialogResult = MessageBox.Show($"Ви впевнені що хочете видалити {clientName.ExecuteScalar().ToString()}?", "Повідомлення", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (dialogResult == MessageBoxResult.No) return;
-            clientDelete = new MySqlCommand($"DELETE FROM client_ WHERE client_id = {index};", connection);
-            clientDelete.ExecuteReader();
-            dt.Clear();
-            adapterClient.Fill(dt);
-            dataGridClient.ItemsSource = dt.DefaultView;
-            connection.Close();
-        }
-
-        private void dataGridClient_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            buttonDelete.Visibility = Visibility.Visible;
-            index = dt.DefaultView[dataGridClient.SelectedIndex]["client_id"].ToString();
         }
     }
 }
