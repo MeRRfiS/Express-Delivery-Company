@@ -29,16 +29,21 @@ namespace Express_Delivery
         
         private MySqlConnection connection;
 
-        private MySqlCommand order;
+        private MySqlCommand dateCheck;
 
         private DataSet ds = new DataSet();
 
+        private DataTable dt = new DataTable();
+
         private MySqlDataAdapter adapterMin;
+        private MySqlDataAdapter adapterDepId;
 
         public AdminMenu()
         {
             InitializeComponent();
             connection = new MySqlConnection(connectString);
+
+            
         }
 
         private void Button_Close_Click(object sender, RoutedEventArgs e)
@@ -69,14 +74,24 @@ namespace Express_Delivery
 
         private void Button_Create_Report_Click(object sender, RoutedEventArgs e)
         {
-            //connection.Open();
-            //order = new MySqlCommand("SELECT * FROM order_ ORDER BY 1", connection);
-            //adapterMin = new MySqlDataAdapter(order);
-            //adapterMin.Fill(ds, "orders");
-            //report.RegisterData(ds);
-            //report.Load("Orders.frx");
-            //report.Show();
-            //connection.Close();
+            adapterDepId = new MySqlDataAdapter(MainWindow.departmentNumber);
+            adapterDepId.Fill(dt);
+            connection.Open();
+            dateCheck = new MySqlCommand($@"SELECT order_id,
+                                    order_date_receiving,
+                                    order_date_end,
+                                    IFNULL(order_tel_client, (SELECT client_tel FROM client_ WHERE client_id = order_client_id)) as 'client_tel',
+                                    IFNULL(order_fine, '0 грн') as 'order_fine'
+                                    FROM order_
+                                    WHERE order_place = 'У місті отримання' AND
+                                    order_date_end <= '2021-05-08' AND
+                                    (SELECT department_id FROM department WHERE order_department_number = department_number and order_city_id = department_city_id) = {dt.Rows[0]["department_id"]};", connection);
+            adapterMin = new MySqlDataAdapter(dateCheck);
+            adapterMin.Fill(ds, "dateChecks");
+            report.RegisterData(ds);
+            report.Load("DateCheck.frx");
+            report.Show();
+            connection.Close();
         }
 
         private void Button_Add_Employee_Click(object sender, RoutedEventArgs e)

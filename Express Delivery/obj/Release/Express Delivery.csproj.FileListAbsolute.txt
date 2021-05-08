@@ -1,0 +1,137 @@
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Orders.frx
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Receipt.frx
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Express Delivery.exe.config
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Express Delivery.exe
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Express Delivery.pdb
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\BouncyCastle.Crypto.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\FastReport.Bars.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\FastReport.Compat.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\FastReport.Data.MySql.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\FastReport.DataVisualization.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\FastReport.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\FastReport.Editor.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\FastReport.OpenSource.Export.PdfSimple.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\FastReport.OpenSource.Web.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Google.Protobuf.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\K4os.Compression.LZ4.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\K4os.Compression.LZ4.Streams.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\K4os.Hash.xxHash.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\MaterialDesignColors.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\MaterialDesignThemes.Wpf.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Authentication.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Authentication.Core.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Authorization.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Authorization.Policy.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Html.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Http.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Http.Extensions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Http.Features.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Mvc.Core.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Routing.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.WebUtilities.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.DotNet.PlatformAbstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.DependencyModel.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Logging.Abstractions.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.ObjectPool.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Options.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Primitives.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Net.Http.Headers.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\MySql.Data.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Newtonsoft.Json.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Renci.SshNet.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Buffers.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Diagnostics.DiagnosticSource.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Memory.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Numerics.Vectors.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Text.Encodings.Web.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Ubiety.Dns.Core.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Zstandard.Net.dll
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\FastReport.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Google.Protobuf.pdb
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Google.Protobuf.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\K4os.Compression.LZ4.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\K4os.Compression.LZ4.Streams.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\K4os.Hash.xxHash.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\MaterialDesignColors.pdb
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\MaterialDesignThemes.Wpf.pdb
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\MaterialDesignThemes.Wpf.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Authentication.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Authentication.Core.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Authorization.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Authorization.Policy.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Hosting.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Html.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Http.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Http.Extensions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Http.Features.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Mvc.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Mvc.Core.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Routing.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.Routing.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.AspNetCore.WebUtilities.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Hosting.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Logging.Abstractions.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.ObjectPool.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Options.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Extensions.Primitives.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Microsoft.Net.Http.Headers.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\MySql.Data.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Newtonsoft.Json.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\Renci.SshNet.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Buffers.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Diagnostics.DiagnosticSource.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Memory.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Numerics.Vectors.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\bin\Release\System.Text.Encodings.Web.xml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express Delivery.csprojAssemblyReference.cache
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\AddOrder.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\AdminMenu.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\CheckOrder.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\EmployeeMenu.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\MainWindow.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\NewClient.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\NewEmployee.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Surrender.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\WatchClient.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\WatchEmployee.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\WatchOrder.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\App.g.cs
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express Delivery_MarkupCompile.cache
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express Delivery_MarkupCompile.lref
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\App.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\AddOrder.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\AdminMenu.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\CheckOrder.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\EmployeeMenu.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\MainWindow.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\NewClient.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\NewEmployee.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Surrender.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\WatchClient.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\WatchEmployee.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\WatchOrder.baml
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express Delivery.g.resources
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express_Delivery.Properties.Resources.resources
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express Delivery.csproj.GenerateResource.cache
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express Delivery.csproj.CoreCompileInputs.cache
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express Delivery.csproj.CopyComplete
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express Delivery.exe
+D:\My Laboratory Work\Курсова робота\Express Delivery\Express Delivery\obj\Release\Express Delivery.pdb

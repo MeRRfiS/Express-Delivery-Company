@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/03/2021 11:00:24" ReportInfo.Modified="05/03/2021 12:55:56" ReportInfo.CreatorVersion="2021.2.10.0">
+  <Dictionary>
+    <TableDataSource Name="receipt" ReferenceName="Data.receipt" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int32"/>
+      <Column Name="client_full_name" DataType="System.String"/>
+      <Column Name="recipient_full_name" DataType="System.String"/>
+      <Column Name="employeet_full_name" DataType="System.String"/>
+      <Column Name="department_adress" DataType="System.String"/>
+      <Column Name="date_get" DataType="System.DateTime"/>
+      <Column Name="date_receiving" DataType="System.DateTime"/>
+      <Column Name="date_storage" DataType="System.DateTime"/>
+      <Column Name="weight" DataType="System.String"/>
+      <Column Name="kind_delivery" DataType="System.String"/>
+      <Column Name="kind_package" DataType="System.String"/>
+      <Column Name="fragility" DataType="System.String"/>
+      <Column Name="return_doc" DataType="System.String"/>
+      <Column Name="price" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperHeight="150" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="56.7">
+      <TextObject Name="Text1" Left="-9.45" Width="727.65" Height="56.7" Border.Lines="Bottom" Border.Width="3" Text="Чек" HorzAlign="Center" VertAlign="Center" Font="Arial, 20pt, style=Bold"/>
+      <TextObject Name="Text42" Width="189" Height="18.9" Text="Компанія Експрес-Доставки" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="59.9" Width="718.2" Height="378" DataSource="receipt">
+      <TextObject Name="Text2" Left="236.25" Top="9.45" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.id]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text3" Left="9.45" Top="9.45" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Номер замовлення" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text4" Left="236.25" Top="37.8" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.client_full_name]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text5" Left="9.45" Top="37.8" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Ім'я клієнта" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text6" Left="236.25" Top="66.15" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.recipient_full_name]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text7" Left="9.45" Top="66.15" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Ім'я отримувача" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text8" Left="236.25" Top="94.5" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.employeet_full_name]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text9" Left="9.45" Top="94.5" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Ім'я робітника" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text10" Left="236.25" Top="122.85" Width="472.5" Height="28.35" Border.Lines="Bottom" CanGrow="true" Text="[receipt.department_adress]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text11" Left="9.45" Top="122.85" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Адреса доставки" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text12" Left="236.25" Top="151.2" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.date_get]" Format="Date" Format.Format="d" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text13" Left="9.45" Top="151.2" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Дата оформлення" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text14" Left="236.25" Top="179.55" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.date_receiving]" Format="Date" Format.Format="d" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text15" Left="236.25" Top="207.9" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.date_storage]" Format="Date" Format.Format="d" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text16" Left="236.25" Top="236.25" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.weight]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text17" Left="236.25" Top="264.6" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.kind_delivery]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text30" Left="236.25" Top="292.95" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.kind_package]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text31" Left="236.25" Top="321.3" Width="472.5" Height="28.35" Border.Lines="Bottom" Text="[receipt.fragility]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text32" Left="236.25" Top="349.65" Width="472.5" Height="28.35" Text="[receipt.return_doc]" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text22" Left="9.45" Top="179.55" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Дата отримання" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text23" Left="9.45" Top="207.9" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Дата зберігання" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text24" Left="9.45" Top="236.25" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Вага" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text25" Left="9.45" Top="264.6" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Вид доставки" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text40" Left="9.45" Top="349.65" Width="226.8" Height="28.35" Border.Lines="Right" Text="Повернення документів" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text39" Left="9.45" Top="321.3" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Крихкість" VertAlign="Center" Font="Arial, 14pt"/>
+      <TextObject Name="Text38" Left="9.45" Top="292.95" Width="226.8" Height="28.35" Border.Lines="Right, Bottom" Text="Вид упакування" VertAlign="Center" Font="Arial, 14pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="441.1" Width="718.2" Height="47.25" CanGrow="true">
+      <TextObject Name="Text33" Left="236.25" Top="9.45" Width="481.95" Height="28.35" Border.Lines="Top" Border.TopLine.Width="3" Text="[receipt.price]" VertAlign="Center" Font="Arial, 16pt, style=Bold"/>
+      <TextObject Name="Text41" Top="9.45" Width="236.25" Height="28.35" Border.Lines="Right, Top" Border.TopLine.Width="3" Text="Ціна доставки" VertAlign="Center" Font="Arial, 16pt, style=Bold"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

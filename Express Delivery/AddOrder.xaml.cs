@@ -1,28 +1,17 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Express_Delivery
 {
-
     public partial class AddOrder : Window
     {
         private static string connectString = "SERVER=localhost;DATABASE=expressdeliverycompany;UID=root;PASSWORD=MeRRFiS2002;";
 
         public static string name;
-        public static string surname = "123";
+        public static string surname;
         public static string phone;
         public static string weight;
         public static string package;
@@ -79,9 +68,11 @@ namespace Express_Delivery
         {
             InitializeComponent();
 
+            connection = new MySqlConnection(connectString);
+
             //employeeMenu = new EmployeeMenu();
             table = new DataTable();
-            connection = new MySqlConnection(connectString);
+            
             city = new MySqlCommand("SELECT city_name FROM city ORDER BY city_id;", connection);
             kindPackage = new MySqlCommand("SELECT kind_package_name FROM kind_package ORDER BY kind_package_id;", connection);
             kindDelivery = new MySqlCommand("SELECT kind_delivery_name FROM kind_delivery ORDER BY kind_delivery_id;", connection);

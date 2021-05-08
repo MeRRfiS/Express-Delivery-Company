@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="04/26/2021 12:16:31" ReportInfo.Modified="04/26/2021 12:28:47" ReportInfo.CreatorVersion="2021.2.7.0">
+  <Dictionary>
+    <TableDataSource Name="orders" ReferenceName="Data.orders" DataType="System.Int32" Enabled="true">
+      <Column Name="order_id" DataType="System.Int32"/>
+      <Column Name="order_weight" DataType="System.Single"/>
+      <Column Name="order_fragility" DataType="System.String"/>
+      <Column Name="order_kind_package_id" DataType="System.SByte"/>
+      <Column Name="order_date" DataType="System.DateTime"/>
+      <Column Name="order_date_end" DataType="System.DateTime"/>
+      <Column Name="order_fine" DataType="System.String"/>
+      <Column Name="order_date_receiving" DataType="System.DateTime"/>
+      <Column Name="order_client_id" DataType="System.Int32"/>
+      <Column Name="order_employee_id" DataType="System.Int32"/>
+      <Column Name="order_kind_delivery_id" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="order_department_number" DataType="System.SByte"/>
+      <Column Name="order_name_recipient" DataType="System.String"/>
+      <Column Name="order_city_id" DataType="System.Boolean" BindableControl="CheckBox"/>
+      <Column Name="order_place" DataType="System.String"/>
+      <Column Name="order_price" DataType="System.String"/>
+      <Column Name="order_return" DataType="System.String"/>
+      <Column Name="order_tel_recipient" DataType="System.String"/>
+      <Column Name="order_name_client" DataType="System.String"/>
+      <Column Name="order_tel_client" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text15" Left="292.95" Top="9.45" Width="94.5" Height="18.9" Text="Список" HorzAlign="Center" Font="Arial, 10pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41" Width="718.2" Height="28.35">
+      <TextObject Name="Text2" Width="94.5" Height="18.9" Text="order_id" Font="Arial, 10pt"/>
+      <TextObject Name="Text4" Left="94.5" Width="94.5" Height="18.9" Text="order_weight" Font="Arial, 10pt"/>
+      <TextObject Name="Text6" Left="189" Width="94.5" Height="18.9" Text="order_fragility" Font="Arial, 10pt"/>
+      <TextObject Name="Text8" Left="283.5" Width="94.5" Height="18.9" Text="order_kind_package_id" Font="Arial, 10pt"/>
+      <TextObject Name="Text10" Left="378" Width="94.5" Height="18.9" Text="order_date" Font="Arial, 10pt"/>
+      <TextObject Name="Text12" Left="472.5" Width="94.5" Height="18.9" Text="order_date_end" Font="Arial, 10pt"/>
+      <TextObject Name="Text14" Left="567" Width="94.5" Height="18.9" Text="order_fine" Font="Arial, 10pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="72.55" Width="718.2" Height="75.6" DataSource="orders">
+      <TextObject Name="Text1" Width="94.5" Height="18.9" Text="[orders.order_id]" Font="Arial, 10pt"/>
+      <TextObject Name="Text3" Left="94.5" Width="94.5" Height="18.9" Text="[orders.order_weight]" Format="Number" Format.UseLocale="true" Format.DecimalDigits="2" HorzAlign="Right" WordWrap="false" Font="Arial, 10pt" Trimming="EllipsisCharacter"/>
+      <TextObject Name="Text5" Left="189" Width="94.5" Height="18.9" Text="[orders.order_fragility]" Font="Arial, 10pt"/>
+      <TextObject Name="Text7" Left="283.5" Width="94.5" Height="18.9" Text="[orders.order_kind_package_id]" Font="Arial, 10pt"/>
+      <TextObject Name="Text9" Left="378" Width="94.5" Height="18.9" Text="[orders.order_date]" Format="Date" Format.Format="d" Font="Arial, 10pt"/>
+      <TextObject Name="Text11" Left="472.5" Width="94.5" Height="18.9" Text="[orders.order_date_end]" Format="Date" Format.Format="d" Font="Arial, 10pt"/>
+      <TextObject Name="Text13" Left="567" Width="94.5" Height="18.9" Text="[orders.order_fine]" Font="Arial, 10pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="151.35" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>
